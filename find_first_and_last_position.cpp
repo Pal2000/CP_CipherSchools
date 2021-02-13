@@ -44,3 +44,6 @@ int32_t main()
     cout<<f<<" "<<l;
     return 0;
 }
+
+Time complexity :- O(logn)
+Space Complexity :- O(1)
