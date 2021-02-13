@@ -2,7 +2,6 @@
 using namespace std;
 #define int long long
 
-
 int findPeak(const vector<int> &a, int n)
 {
     if(n==1) return a[0];
@@ -27,3 +26,4 @@ int32_t main()
     return 0;
 }
 Time complexity - O(n)
+Space complexity - O(1)
