@@ -65,7 +65,7 @@ void printLL(Node* head){
 
 Node* findIntersectionInSortedLL(Node* head1, Node* head2)
 {
-    // Your Code Here
+    
     Node* res=NULL, *resNext=NULL;
     Node* l1=head1, *l2=head2;
     while(l1 && l2){
