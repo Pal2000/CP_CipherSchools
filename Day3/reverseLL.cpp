@@ -65,6 +65,22 @@ int getSize(Node* head){
     }
 }
 
+
+
+void printLL(Node* head){
+    if(head==NULL) 
+    return;
+    else{
+        Node* ptr=head;
+        while(ptr){
+            cout<<ptr->val<<"  ";
+            ptr=ptr->next;
+        }
+    }
+}
+
+
+
 Node* reverseLLIterative(Node* head){
     if(!head) return NULL;
     Node* cur=head, *nextnode=NULL, *prev=NULL;
