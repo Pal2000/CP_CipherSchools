@@ -19,7 +19,7 @@ class Node{
 
 class SLL{
     public:
-    Node* head, *head2, *head3, *head4, *head5;
+    Node* head;
     SLL(){
         this->head=NULL;
         
@@ -107,7 +107,7 @@ int main()
     sll->head->next->next->next->next = new Node(1); 
     
 
-    if(palindromicLL(sll->head2)) cout<<"YES\n";
+    if(palindromicLL(sll->head)) cout<<"YES\n";
     else cout<<"NO\n";
     cout<<"\n";
    
