@@ -17,7 +17,7 @@ node* newNode(int data)
     return temp; 
 } 
 
- vector<vector<int>> verticalTraversal(TreeNode* root, vector<vector<int>> &ans) {
+ vector<vector<int>> verticalTraversal(Node* root, vector<vector<int>> &ans) {
   
     if(!root)
         return ans;
@@ -33,7 +33,7 @@ node* newNode(int data)
         level++;
         for(int i=0;i<sz;i++)
         {
-            TreeNode* cur=q.front().first;
+            Node* cur=q.front().first;
             int hd=q.front().second;
             q.pop();
             if(cur->left)
