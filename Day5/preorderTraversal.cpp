@@ -37,7 +37,7 @@ int main()
     root->right->right = newNode(6);
     
    
-   preorderTraversal(ans);
+   preorderTraversal(root);
 
   
   
