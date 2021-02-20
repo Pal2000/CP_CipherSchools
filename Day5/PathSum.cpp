@@ -21,11 +21,11 @@ bool solve(Node* root, int sum, int s){
         return false;
     if((root->left==NULL) && (root->right==NULL))
     {
-        s+=root->val;
+        s+=root->data;
         if(s==sum)
             return true;
     }
-    s+=root->val;
+    s+=root->data;
     return (solve(root->left, sum, s) || (solve(root->right, sum, s)));
 }
 bool hasPathSum(Node* root, int sum) {
