@@ -20,9 +20,9 @@ node* newNode(int data)
 
 void inorderTraversal(Node* root){
     if(!root) return;
-    preorderTraversal(root->left);
+    inorderTraversal(root->left);
     cout<<root->data<<" ";
-    preorderTraversal(root->right);
+    inorderTraversal(root->right);
 }
 
 
