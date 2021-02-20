@@ -31,6 +31,14 @@ Node* mergeTrees(Node* t1, Node* t2) {
         return t1;
     }
 
+
+void preorder(Node* root){
+  if(!root) return;
+  cout<<root->data<<" ";
+  preorder(root->left);
+  preorder(root->right);
+}
+
 int main() 
 { 
    node *root = newNode(1); 
@@ -47,7 +55,9 @@ int main()
     root2->left->right = newNode(25); 
     root2->right->right = newNode(6);
     
-   cout<<mergeTrees(root, root2);
+   Node* ans=mergeTrees(root, root2);
+  
+  preorder(ans);
   
   
     return 0; 
