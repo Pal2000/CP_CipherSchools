@@ -17,15 +17,15 @@ node* newNode(int data)
     return temp; 
 } 
 
- vector<vector<int>> verticalTraversal(Node* root, vector<vector<int>> &ans) {
+void verticalTraversal(Node* root, vector<vector<int>> &ans) {
   
     if(!root)
-        return ans;
+        return;
     map<int,vector<pair<int,int>>> mp;
-    queue<pair<TreeNode*,int>> q;
+    queue<pair<Node*,int>> q;
     
     q.push({root,0});
-    mp[0].push_back({0,root->val});
+    mp[0].push_back({0,root->data});
     
     int level=0;
     while(!q.empty()){
@@ -38,12 +38,12 @@ node* newNode(int data)
             q.pop();
             if(cur->left)
             {
-                mp[hd-1].push_back({level,cur->left->val});
+                mp[hd-1].push_back({level,cur->left->data});
                 q.push({cur->left,hd-1});
             }
             if(cur->right)
             {
-                mp[hd+1].push_back({level,cur->right->val});
+                mp[hd+1].push_back({level,cur->right->data});
                 q.push({cur->right,hd+1});
             }
         }
@@ -57,7 +57,7 @@ node* newNode(int data)
         }
         ans.push_back(v);
     }
-    return ans;
+    return;
 }
 
 
