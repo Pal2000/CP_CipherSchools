@@ -16,7 +16,7 @@ node* newNode(int data)
     temp->right = NULL; 
     return temp; 
 } 
-bool solve(TreeNode* root, int sum, int s){
+bool solve(Node* root, int sum, int s){
     if(!root)
         return false;
     if((root->left==NULL) && (root->right==NULL))
@@ -28,7 +28,7 @@ bool solve(TreeNode* root, int sum, int s){
     s+=root->val;
     return (solve(root->left, sum, s) || (solve(root->right, sum, s)));
 }
-bool hasPathSum(TreeNode* root, int sum) {
+bool hasPathSum(Node* root, int sum) {
     if(!root)
         return false;
    
@@ -43,7 +43,7 @@ int main()
     root->left->left = newNode(4); 
     root->left->right = newNode(5); 
     root->right->right = newNode(6); 
-    vector<vector<int>> res;
+   
    cout<<hasPathSum(root, 12);
   
   
