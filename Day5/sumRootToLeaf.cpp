@@ -17,7 +17,7 @@ node* newNode(int data)
     return temp; 
 } 
 
-void solve(TreeNode* root, int num, int &sum)
+void solve(Node* root, int num, int &sum)
     {
         if(root==NULL)
             return;
@@ -27,7 +27,7 @@ void solve(TreeNode* root, int num, int &sum)
         sum+=num;
         solve(root->right,num,sum);
     }
-    int sumNumbers(TreeNode* root) {
+    int sumNumbers(Node* root) {
         if(root==NULL)
             return 0;
         int sum=0,num=0;
@@ -43,7 +43,7 @@ int main()
     root->left->left = newNode(4); 
     root->left->right = newNode(5); 
     root->right->right = newNode(6); 
-    vector<vector<int>> res;
+    
    cout<<sumNumbers(root);
   
   
