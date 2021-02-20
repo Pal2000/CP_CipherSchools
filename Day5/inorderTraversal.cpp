@@ -18,7 +18,7 @@ node* newNode(int data)
 } 
     
 
-void preorderTraversal(Node* root){
+void inorderTraversal(Node* root){
     if(!root) return;
     preorderTraversal(root->left);
     cout<<root->data<<" ";
@@ -37,7 +37,7 @@ int main()
     root->right->right = newNode(6);
     
    
-   preorderTraversal(ans);
+   inorderTraversal(ans);
 
   
   
