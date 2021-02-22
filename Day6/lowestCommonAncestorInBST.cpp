@@ -11,8 +11,8 @@ class Node
 Node* newNode(int data)  
 {  
     Node* node = new Node(); 
-    Node->data = data;  
-    Node->left = Node->right = NULL;  
+    node->data = data;  
+    node->left = node->right = NULL;  
     return(node);  
 }  
 
