@@ -70,7 +70,7 @@ class MinHeap{
         int smallest=idx;
         if(l<size && arr[l]<arr[smallest])
         smallest=l;
-        if(r<size && arr[r]<smallest)
+        if(r<size && arr[r]<arr[smallest])
         smallest=r;
         if(smallest != idx){
             swap(&arr[idx], &arr[smallest]);
